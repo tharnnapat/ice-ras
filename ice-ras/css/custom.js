@@ -15,8 +15,8 @@ $(document).ready(function() {
 		$('b#search-string').html(query_value);
 		if(query_value !== ''){
 			$.ajax({
-				type: "GET",
-				url: "main.py",
+				type: "POST",
+				url: "search.php",
 				data: { query: query_value },
 				cache: false,
 				success: function(html){
