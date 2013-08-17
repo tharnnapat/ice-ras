@@ -88,42 +88,44 @@ _INSTANCE_NAME="prinya-th-2013:prinya-db"
 # 			conn.close()
 # 			self.redirect("/")
 
-class Notification(webapp2.RequestHandler):
-	def get(self):
-
-		conn = rdbms.connect(instance=_INSTANCE_NAME, database='Prinya_Project')
-	    	cursor = conn.cursor()
-	    	sql = ("""select log_id,course_name,day,time,l.type,l.staff_id,firstname,email 
-					from log l join staff s 
-					on l.staff_id=s.staff_id 
-					join course c
-					on c.course_id=l.course_id
-					order by log_id desc""")
-		cursor.execute(sql)
-
-		templates = {
-
-					'log' : cursor.fetchall(),
-					}
-
-		template = JINJA_ENVIRONMENT.get_template('notification.html')
-		self.response.write(template.render(templates))
-			
-		conn.close();
-
-# class Search(webapp2.RequestHandler):
+# class Notification(webapp2.RequestHandler):
 # 	def get(self):
+
+# 		conn = rdbms.connect(instance=_INSTANCE_NAME, database='Prinya_Project')
+# 	    	cursor = conn.cursor()
+# 	    	sql = ("""select log_id,course_name,day,time,l.type,l.staff_id,firstname,email 
+# 					from log l join staff s 
+# 					on l.staff_id=s.staff_id 
+# 					join course c
+# 					on c.course_id=l.course_id
+# 					order by log_id desc""")
+# 		cursor.execute(sql)
 
 # 		templates = {
 
-# 					# 'log' : cursor.fetchall(),
+# 					'log' : cursor.fetchall(),
 # 					}
 
-# 		template = JINJA_ENVIRONMENT.get_template('index.html')
+# 		template = JINJA_ENVIRONMENT.get_template('notification.html')
 # 		self.response.write(template.render(templates))
+			
+# 		conn.close();
+
+class Search(webapp2.RequestHandler):
+	def get(self):
+
+		value = self.request.get('query');
+
+		templates = {
+
+					 'value' : value,
+					}
+
+		template = JINJA_ENVIRONMENT.get_template('index.html')
+		self.response.write(template.render(templates))
 
 
 
 app = webapp2.WSGIApplication([
-    ('/', Notification),	
+    ('/', Search),	
 ], debug=True)

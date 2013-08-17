@@ -51,7 +51,7 @@ body,td,th {
 	font-weight: bolder;
 }
 .font1 {
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: bolder;
 }
 .width280 {
@@ -85,6 +85,91 @@ body,td,th {
 	width: 280px;
 }
 .font2 {
-	font-size: 24px;
+	font-size: 1.55em;
 	font-weight: bold;
+	color: #C00;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.font-new {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #FFF;
+	font-weight: bold;
+}
+#head a:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #FFF;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#head a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #64C9A4;
+}
+#head a:visited {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: .95px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.font-new2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #3D332E;
+	font-weight: bold;
+}
+body {
+	background-color: #f0e8dd;
+
+}
+
+
+.link2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #C00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#t1 a:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #C00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#t1  a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #FFF;
+}
+#t1  a:visited {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95px;
+	font-weight: bold;
+	color: #F00;
+	text-decoration: underline;
+}
+#t2  a:link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95em;
+	color: #C00;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#t2 a:hover {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #FFF;
+}
+#t2  a:visited {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 0.95px;
+	font-weight: bold;
+	color: #F00;
+	text-decoration: underline;
 }

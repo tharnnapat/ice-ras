@@ -19,31 +19,31 @@ document.write(carsi);
 </head>
 <body>
  <form id="form1" name="form1" method="get" action="/toggle">
-<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" class="bg1">
   <tr>
     <td align="center" class="font2"><div style="margin-bottom:15px;">Register Administrator System</div></td>
   </tr>
   <tr>
     <td><table width="300" border="0" cellpadding="10" cellspacing="0" id="head">
       <tr>
-        <td width="150" align="center" bgcolor="#FFFFCC"><a href="http://prinya-ailada.appspot.com">Course</a></td>
-        <td width="150" align="center" bgcolor="#FFFFCC"><a href="/notification">Notification</a></td>
+        <td width="150" align="center" bgcolor="#91796e"><a href="/">Course</a></td>
+        <td width="150" align="center" bgcolor="#91796e"><a href="/notification" class="link1">Notification</a></td>
       </tr>
     </table></td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FFFFCC">
+    <td align="center" bgcolor="#91796E">
     <div style="margin-top:10px; margin-bottom:10px;">
     {% for row in log %}
     {% if(row[0]%2==0) %}
-    <table width="880" border="0" cellspacing="0" cellpadding="7">
+    <table width="880" border="0" cellpadding="7" cellspacing="0" id="t1">
       <tr>
-        <td colspan="2" align="left" bgcolor="#FFFF66"><span id='test'></span>Notification :: {{ row[0] }}</td>
+        <td colspan="2" align="left" bgcolor="#64c9a4"><span class="font-new2">Notification :: {{ row[0] }}</span></td>
       </tr>
       <tr>
-        <td colspan="2" align="left" bgcolor="#FFFF66">
+        <td colspan="2" align="left" bgcolor="#64c9a4"><span class="font-new2">
         Course  :: {{ row[1] }} Has been 
-    <script>
+            <script>
     var type="{{row[4]}}";
     if(type==1){
       document.write("Create Course By :: ");
@@ -60,26 +60,24 @@ document.write(carsi);
     }else if(type==7){
       document.write("Delete Section Time By :: ")
     }
-    </script>
-        {{ row[6]}} 
-        </td>
+            </script>
+        {{ row[6]}}        </span></td>
         </tr>
       <tr>
-        <td align="left" bgcolor="#FFFF66">
-        Date :: {{ row [2] }}   &nbsp;&nbsp;&nbsp;Time ::{{row[3]}}
-        </td>
-        <td width="300" align="left" bgcolor="#FFFF66">Email :: {{row[7]}}</td>
+        <td align="left" bgcolor="#64c9a4"><span class="font-new2">
+        Date :: {{ row [2] }}   &nbsp;&nbsp;&nbsp;Time ::{{row[3]}}        </span></td>
+        <td width="300" align="left" bgcolor="#64c9a4"><span class="font-new2">Email :: <a href="{{ row[7] }}" class="link2">{{row[7]}}</a></span></td>
       </tr>
     </table>
       {% else %}
-          <table width="880" border="0" cellspacing="0" cellpadding="7">
+          <table width="880" border="0" cellpadding="7" cellspacing="0" id="t2">
       <tr>
-        <td colspan="2" align="left" bgcolor="#FFFF33">Notification :: {{ row[0] }}</td>
+        <td colspan="2" align="left" bgcolor="#4b9682"><span class="font-new">Notification :: {{ row[0] }}</span></td>
       </tr>
       <tr>
-        <td colspan="2" align="left" bgcolor="#FFFF33">
+        <td colspan="2" align="left" bgcolor="#4b9682"><span class="font-new">
         Course  :: {{ row[1] }} Has been 
-        <script>
+            <script>
 		var type="{{row[4]}}";
 		if(type==1){
 			document.write("Create Course By :: ");
@@ -96,15 +94,13 @@ document.write(carsi);
     }else if(type==7){
       document.write("Delete Section Time By :: ")
     }
-		</script>
-        {{ row[6]}} 
-        </td>
+		    </script>
+        {{ row[6]}}        </span></td>
         </tr>
       <tr>
-        <td align="left" bgcolor="#FFFF33">
-        Date :: {{ row [2] }}   &nbsp;&nbsp;&nbsp;Time ::{{row[3]}}
-        </td>
-        <td width="300" align="left" bgcolor="#FFFF33">Email :: {{row[7]}}</td>
+        <td align="left" bgcolor="#4b9682"><span class="font-new">
+        Date :: {{ row [2] }}   &nbsp;&nbsp;&nbsp;Time ::{{row[3]}}        </span></td>
+        <td width="300" align="left" bgcolor="#4b9682"><span class="font-new">Email :: <a href="{{ row[7] }}" class="link2">{{row[7]}}</a></span></td>
       </tr>
     </table>
       {% endif %}  
